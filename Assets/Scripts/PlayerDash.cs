@@ -7,7 +7,7 @@ public class PlayerDash : MonoBehaviour
 {
     [SerializeField] private PlayerVariables pV;
     [SerializeField] private Rigidbody2D rb;
-    public float frictionMultiplier = 0.9f;
+    public float frictionMultiplier = 0.97f;
     
     void Start()
     {
@@ -34,7 +34,7 @@ private void HandleDashInput()
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 dashDirection = ActualNormalize(mousePos - new Vector2(transform.position.x, transform.position.y));
-        float currentDashSpeed = 5*Math.Min(pV.maxQuickDashRadius, Vector2.Distance(mousePos, transform.position));
+        float currentDashSpeed = 2*Math.Min(pV.maxQuickDashRadius, Vector2.Distance(mousePos, transform.position));
         pV.pH.dashDamage();
         rb.velocity = dashDirection * currentDashSpeed;
 
@@ -45,7 +45,7 @@ private void HandleDashInput()
 
 private IEnumerator HandleDashDeceleration()
 {
-    float dashTime = 0.1f;
+    float dashTime = 0.3f;
     float timeElapsed = 0f;
 
     while (timeElapsed < dashTime)
@@ -54,7 +54,7 @@ private IEnumerator HandleDashDeceleration()
         yield return null;
     }
 
-    while (rb.velocity.magnitude > 0.1f)
+    while (rb.velocity.magnitude > 0.01f)
     {
         Debug.Log(rb.velocity);
         rb.velocity = frictionMultiplier * rb.velocity;
