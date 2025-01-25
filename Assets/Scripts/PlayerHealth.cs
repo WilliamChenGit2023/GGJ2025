@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         //pV = GetComponent<PlayerVariables>();
+        pV.base_size = transform.localScale;
     }
     public void takeDamage(){
         Debug.Log(pV.dmgm);
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public void dashDamage(){
         Debug.Log(pV.dashCost);
         transform.localScale = pV.dashCost*transform.localScale;
+        
     }
     void passiveShrink(){
         transform.localScale = pV.shrinkRate*transform.localScale;

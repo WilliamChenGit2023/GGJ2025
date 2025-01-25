@@ -30,10 +30,9 @@ public class PlayerVariables : MonoBehaviour
         isStunCoroutineRunning = false;
 
         base_scale = 1f;
-        base_size = transform.localScale;
         shrinkRate = 0.999f;
         transform.localScale  = base_scale*transform.localScale;
-        killSize = 0.7f;
+        killSize = 0.55f;
         dmgm = 0.8f;
 
         pM = GetComponent<PlayerMovement>();

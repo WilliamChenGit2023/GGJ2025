@@ -56,7 +56,7 @@ private IEnumerator HandleDashDeceleration()
 
     while (rb.velocity.magnitude > 0.0001f)
     {
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
         rb.velocity = frictionMultiplier * rb.velocity;
         yield return null;
     }
