@@ -24,13 +24,14 @@ public class PlayerVariables : MonoBehaviour
         inStun = false;
         isStunCoroutineRunning = false;
 
-        base_scale = 2f;
+        base_scale = 1f;
         base_size = transform.localScale;
         shrinkRate = 0.999f;
         transform.localScale  = base_scale*transform.localScale;
-        killSize = 1.2f;
+        killSize = 0.6f;
 
         pM = GetComponent<PlayerMovement>();
+        //rb = GetComponent<RigidBody2D>();
     }
 
     // Update is called once per frame

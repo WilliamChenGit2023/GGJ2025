@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private PlayerVariables pV;
     void Start()
     {
-        pV = GetComponent<PlayerVariables>();
+        //pV = GetComponent<PlayerVariables>();
     }
     void passiveShrink(){
         transform.localScale = pV.shrinkRate*transform.localScale;
