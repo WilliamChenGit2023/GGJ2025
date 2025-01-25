@@ -7,7 +7,7 @@ public class PlayerDash : MonoBehaviour
 {
     [SerializeField] private PlayerVariables pV;
     [SerializeField] private Rigidbody2D rb;
-    public float frictionMultiplier = 0.97f;
+    public float frictionMultiplier = 0.999f;
     
     void Start()
     {
@@ -54,14 +54,14 @@ private IEnumerator HandleDashDeceleration()
         yield return null;
     }
 
-    while (rb.velocity.magnitude > 0.01f)
+    while (rb.velocity.magnitude > 0.0001f)
     {
         Debug.Log(rb.velocity);
         rb.velocity = frictionMultiplier * rb.velocity;
         yield return null;
     }
 
-    rb.velocity = Vector2.zero;
+    //rb.velocity = Vector2.zero;
     pV.isDashing = false;
     isDashingInProgress = false;
 }
