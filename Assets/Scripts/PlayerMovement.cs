@@ -35,11 +35,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         handleInvincible();
-        if(!pV.inStun){
-            slowWASDMovement();}
-        else{
-            handleStun();
+        if(pV.isDashing){
+            //do nothing
         }
+        else if(!pV.inStun){
+            slowWASDMovement();}
+        handleStun();
     }
     public void knockBack(Vector2 knockbackDirection, float force = 30f)
     {
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         while (elapsedTime < iDuration)
         {
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
+            //Debug.Log(elapsedTime);
             yield return null; // Wait for the next frame
         }
         pV.isInvincible = false;
@@ -98,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             float decelerationFactor =( 1 - (elapsedTime / stunDuration));
             pV.rb.velocity = initialVelocity*decelerationFactor; // Apply deceleration
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
+            //Debug.Log(elapsedTime);
             yield return null; // Wait for the next frame
         }
         pV.isInvincible = true;

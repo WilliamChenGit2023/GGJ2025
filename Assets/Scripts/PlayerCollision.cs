@@ -23,6 +23,7 @@ public class PlayerCollision : MonoBehaviour
         {
             
             pV.pM.knockBack(new Vector2(0,-1));
+            pV.pH.takeDamage();
             Debug.Log("Hit an enemy!");
 
         }

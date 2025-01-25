@@ -17,6 +17,11 @@ public class PlayerVariables : MonoBehaviour
     public float shrinkRate;
     public float killSize;
     public PlayerMovement pM;
+    public PlayerHealth pH;
+    public float dmgm;
+    public bool isDashing = false;
+    public float maxQuickDashRadius = 100f;
+    public float dashCost = 0.9f;
     void Start()
     {
         base_float = 0.5f;
@@ -28,7 +33,8 @@ public class PlayerVariables : MonoBehaviour
         base_size = transform.localScale;
         shrinkRate = 0.999f;
         transform.localScale  = base_scale*transform.localScale;
-        killSize = 0.6f;
+        killSize = 0.7f;
+        dmgm = 0.8f;
 
         pM = GetComponent<PlayerMovement>();
         //rb = GetComponent<RigidBody2D>();
