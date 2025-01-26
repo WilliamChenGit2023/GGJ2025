@@ -38,24 +38,24 @@ public class PlayerMovement : MonoBehaviour
         if(pV.isDashing){
             //do nothing
         }
-        else if(!pV.inStun){
+        else if(pV.inStun == 0){
             slowWASDMovement();}
         handleStun();
     }
-    public void knockBack(Vector2 knockbackDirection, float force = 30f)
+    public void knockBack(Vector2 knockbackDirection, float force = 1f)
     {
         if(pV.isInvincible)return;
-        pV.inStun = true;
+        pV.inStun = force * 0.2f;
         pV.rb.velocity = Vector2.zero;
-        pV.rb.velocity = knockbackDirection * force;
+        pV.rb.velocity = knockbackDirection * 30f;
     }
     private void handleStun()
     {
         // Only start the StunCoroutine if it's not already running
         
-        if (pV.inStun && !pV.isStunCoroutineRunning)
+        if (pV.inStun != 0f && !pV.isStunCoroutineRunning)
         {
-            StartCoroutine(StunCoroutine(0.2f));
+            StartCoroutine(StunCoroutine(pV.inStun));
         }
     }
 
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator StunCoroutine(float stunDuration)
     {
         pV.isStunCoroutineRunning = true; // Mark that the coroutine is running
-
+        Debug.Log(stunDuration);
         Vector2 initialVelocity = pV.rb.velocity; // Store the initial velocity
         float elapsedTime = 0f;
 
@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         }
         pV.isInvincible = true;
         pV.rb.velocity = Vector2.zero; // Ensure the Rigidbody is fully stopped
-        pV.inStun = false; // End stun
+        pV.inStun = 0f; // End stun
         pV.isStunCoroutineRunning = false; // Mark that the coroutine has ended
     }
 }

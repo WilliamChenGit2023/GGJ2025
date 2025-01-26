@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spike
   - character
+  - squid
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,7 @@ public class PlayerVariables : MonoBehaviour
     public Rigidbody2D rb;
     public float base_speed;
     public float base_float;
-    public bool inStun;
+    public float inStun;
     public bool isStunCoroutineRunning;
     public bool isInvincible = false;
     public bool isInvincibleCoroutineRunning = false;
@@ -28,11 +28,11 @@ public class PlayerVariables : MonoBehaviour
     {
         base_float = 0.5f;
         base_speed = 4f;
-        inStun = false;
+        inStun = 0f;
         isStunCoroutineRunning = false;
 
         base_scale = 1f;
-        shrinkRate = 0.999f;
+        shrinkRate = 0.99f;
         transform.localScale  = base_scale*transform.localScale;
         killSize = 0.55f;
         dmgm = 0.8f;
