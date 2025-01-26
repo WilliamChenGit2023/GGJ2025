@@ -6,6 +6,9 @@ public class EnemyVariables : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool isAggro = false;
+    public float inStun = 0f;
+    public Rigidbody2D rb;
+    public bool isStunCoroutineRunning = false;
     void Start()
     {
         

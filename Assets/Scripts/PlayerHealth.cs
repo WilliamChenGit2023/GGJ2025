@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(float dm = 1f){
         if(pV.isInvincible) return;
         Debug.Log(dm);
-        transform.localScale = (1/dm)*pV.dmgm*transform.localScale;
+        transform.localScale = (pV.dmgm-0.05f*(dm-1f))*transform.localScale;
         animator.SetTrigger("Bounce");
     }
     public void dashDamage(){
