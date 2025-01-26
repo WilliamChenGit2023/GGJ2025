@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8302791385786310514}
   - component: {fileID: 2460421973891519823}
   - component: {fileID: 6004553737038326600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,6 +383,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pV: {fileID: 9110334131245022006}
+--- !u!1 &4609394887522538578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2334647339299957141}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2334647339299957141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609394887522538578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.63, y: 3.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6996223759527302326}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6072875578850097340
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +428,7 @@ GameObject:
   - component: {fileID: 4641803371209592034}
   - component: {fileID: 5800030650064344034}
   - component: {fileID: 6951135536234802049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,6 +452,7 @@ Transform:
   - {fileID: 8826702069124892058}
   - {fileID: 2950400032944933057}
   - {fileID: 7416868322298123574}
+  - {fileID: 2334647339299957141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9110334131245022006
