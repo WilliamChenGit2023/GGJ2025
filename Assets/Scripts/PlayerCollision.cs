@@ -9,6 +9,14 @@ public class PlayerCollision : MonoBehaviour
     {
         pV = GetComponent<PlayerVariables>();
     }
+    Vector2 ActualNormalize(Vector2 direction)
+    {
+        float mag = direction.magnitude;
+        Vector2 retval = Vector2.zero;
+        retval[0] = direction[0] / mag;
+        retval[1] = direction[1] / mag;
+        return retval;
+    }
     void OnCollisionEnter2D(Collision2D collision)
 
     {
@@ -21,8 +29,8 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("spike")) 
 
         {
-            
-            pV.pM.knockBack(new Vector2(0,-1));
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
+            pV.pM.knockBack(direction);
             pV.pH.takeDamage();
             Debug.Log("Hit an enemy!");
 
