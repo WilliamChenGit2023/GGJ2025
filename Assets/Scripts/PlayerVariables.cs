@@ -22,6 +22,8 @@ public class PlayerVariables : MonoBehaviour
     public bool isDashing = false;
     public float maxQuickDashRadius = 100f;
     public float dashCost = 0.9f;
+    public bool isHealing = false;
+    public float healrate = 1.0000000000000001f;
     void Start()
     {
         base_float = 0.5f;
