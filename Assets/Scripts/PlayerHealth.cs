@@ -43,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
         if (transform.localScale.magnitude < pV.base_size.magnitude)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, pV.base_size, pV.healrate * Time.deltaTime);
+            Debug.Log("Healing");
         }
         else
         {
@@ -59,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(pV.isHealing);
         if(!pV.isHealing){
             passiveShrink();
             bubbleTooSmall();
