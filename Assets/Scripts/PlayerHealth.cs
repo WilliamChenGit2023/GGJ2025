@@ -17,8 +17,9 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     public void takeDamage(float dm = 1f){
+        if(pV.isInvincible) return;
         Debug.Log(dm);
-        transform.localScale = dm*pV.dmgm*transform.localScale;
+        transform.localScale = (1/dm)*pV.dmgm*transform.localScale;
         animator.SetTrigger("Bounce");
     }
     public void dashDamage(){
