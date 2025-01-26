@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator StunCoroutine(float stunDuration)
     {
         pV.isStunCoroutineRunning = true; // Mark that the coroutine is running
-        Debug.Log(stunDuration);
+        //Debug.Log(stunDuration);
         Vector2 initialVelocity = pV.rb.velocity; // Store the initial velocity
         float elapsedTime = 0f;
 

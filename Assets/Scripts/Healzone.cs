@@ -27,7 +27,7 @@ public class Healzone : MonoBehaviour
             //Debug.Log("Colliding with: ");
             foreach (Collider2D col in colliders)
             {
-                Debug.Log(col.gameObject.name);  // List colliding objects
+                //Debug.Log(col.gameObject.name);  // List colliding objects
                 if(col.gameObject.name == "Bubble"){
                     pV.isHealing = true;
                 }
