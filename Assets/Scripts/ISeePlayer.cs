@@ -47,9 +47,11 @@ public class ISeePlayer : MonoBehaviour
     }
     void Update()
     {
-        chase();
-        playerinrange();
-        turning();
+        if(eV.inStun == 0){
+            chase();
+            playerinrange();
+            turning();
+        }
     }
 
     void OnDrawGizmosSelected()
