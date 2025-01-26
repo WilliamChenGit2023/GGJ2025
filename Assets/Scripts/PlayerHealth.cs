@@ -23,6 +23,17 @@ public class PlayerHealth : MonoBehaviour
     void passiveShrink(){
         transform.localScale = pV.shrinkRate*transform.localScale;
     }
+    void bubbleheal(){
+        if (transform.localScale.magnitude < pV.base_size.magnitude)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, pV.base_size, pV.healrate * Time.deltaTime);
+        }
+        else
+        {
+            transform.localScale = pV.base_size;
+        }
+        
+    }
     void bubbleTooSmall(){
         //Debug.Log(transform.localScale.magnitude);
         if(transform.localScale.magnitude <= (pV.killSize * pV.base_size).magnitude){
@@ -32,7 +43,12 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        passiveShrink();
-        bubbleTooSmall();
+        if(!pV.isHealing){
+            passiveShrink();
+            bubbleTooSmall();
+        }
+        else{
+            bubbleheal();
+        }
     }
 }
