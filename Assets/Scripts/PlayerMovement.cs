@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     public void knockBack(Vector2 knockbackDirection, float force = 1f)
     {
         if(pV.isInvincible)return;
-        pV.inStun = force * 0.2f;
+        pV.inStun = force * 0.1f;
         pV.rb.velocity = Vector2.zero;
         pV.rb.velocity = knockbackDirection * 30f;
     }

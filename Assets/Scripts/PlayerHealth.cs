@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private PlayerVariables pV;
-    private float shrinkDelay = 0.25f;  // Time to wait between each shrink step (in seconds)
+    private float shrinkDelay = 0.5f;  // Time to wait between each shrink step (in seconds)
     private float timeSinceLastShrink = 0f; //
     [SerializeField] private Animator animator;
 
@@ -16,9 +16,10 @@ public class PlayerHealth : MonoBehaviour
         pV.base_size = transform.localScale;
         animator = GetComponent<Animator>();
     }
-    public void takeDamage(){
-        Debug.Log(pV.dmgm);
-        transform.localScale = pV.dmgm*transform.localScale;
+    public void takeDamage(float dm = 1f){
+        if(pV.isInvincible) return;
+        Debug.Log(dm);
+        transform.localScale = (pV.dmgm-0.05f*(dm-1f))*transform.localScale;
         animator.SetTrigger("Bounce");
     }
     public void dashDamage(){
@@ -43,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
         if (transform.localScale.magnitude < pV.base_size.magnitude)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, pV.base_size, pV.healrate * Time.deltaTime);
+            //Debug.Log("Healing");
         }
         else
         {
@@ -59,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Debug.Log(pV.isHealing);
+        //Debug.Log("bad");
         if(!pV.isHealing){
             passiveShrink();
             bubbleTooSmall();

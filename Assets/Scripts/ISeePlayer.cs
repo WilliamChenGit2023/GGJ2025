@@ -15,7 +15,7 @@ public class ISeePlayer : MonoBehaviour
     }
     void playerinrange(){
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-            Debug.Log("Distance to player: " + distanceToPlayer);
+            //Debug.Log("Distance to player: " + distanceToPlayer);
 
             if (distanceToPlayer <= detectionRadius && distanceToPlayer > stoppingDistance)
             {
@@ -25,7 +25,7 @@ public class ISeePlayer : MonoBehaviour
             }
             else if (distanceToPlayer <= stoppingDistance)
             {
-                Debug.Log("Reached stopping distance from player.");
+                //Debug.Log("Reached stopping distance from player.");
                 eV.isAggro = false;
             }
             else{
@@ -47,9 +47,11 @@ public class ISeePlayer : MonoBehaviour
     }
     void Update()
     {
-        chase();
-        playerinrange();
-        turning();
+        if(eV.inStun == 0){
+            chase();
+            playerinrange();
+            turning();
+        }
     }
 
     void OnDrawGizmosSelected()

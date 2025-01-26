@@ -40,8 +40,17 @@ public class PlayerCollision : MonoBehaviour
 
         {
             Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
-            pV.pM.knockBack(direction, 2.0f);
+            pV.pM.knockBack(direction, 1.25f);
             Debug.Log("Hit an enemy!");
+        }
+
+        if (collision.gameObject.CompareTag("af")) 
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
+            pV.pM.knockBack(direction,1.25f);
+            pV.pH.takeDamage(2f);
+            Debug.Log("angler");
         }
 
     }
