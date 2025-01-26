@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6170429595743030151}
   - component: {fileID: 8302791385786310514}
   - component: {fileID: 2460421973891519823}
+  - component: {fileID: 6004553737038326600}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d101e97620781dc45b1563df942bcd6c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34fa1f123015d224983edc1536b482a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0164a96a356e5484dbfb64deb42afece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,6 +135,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pV: {fileID: 9110334131245022006}
+--- !u!95 &6004553737038326600
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941876782216648626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da691e33bfaeb3943adb2ec5d371d71b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4059131462039798757
 GameObject:
   m_ObjectHideFlags: 0
