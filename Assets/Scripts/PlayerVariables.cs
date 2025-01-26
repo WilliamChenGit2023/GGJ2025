@@ -27,7 +27,7 @@ public class PlayerVariables : MonoBehaviour
     void Start()
     {
         base_float = 0.5f;
-        base_speed = 7f;
+        base_speed = 4f;
         inStun = false;
         isStunCoroutineRunning = false;
 
