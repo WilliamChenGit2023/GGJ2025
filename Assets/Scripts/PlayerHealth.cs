@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private PlayerVariables pV;
-    private float shrinkDelay = 0.25f;  // Time to wait between each shrink step (in seconds)
+    private float shrinkDelay = 0.5f;  // Time to wait between each shrink step (in seconds)
     private float timeSinceLastShrink = 0f; //
     [SerializeField] private Animator animator;
 
@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     public void takeDamage(float dm = 1f){
+        if(pV.isInvincible) return;
         Debug.Log(dm);
         transform.localScale = (1/dm)*pV.dmgm*transform.localScale;
         animator.SetTrigger("Bounce");
