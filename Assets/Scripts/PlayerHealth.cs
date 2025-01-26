@@ -16,9 +16,9 @@ public class PlayerHealth : MonoBehaviour
         pV.base_size = transform.localScale;
         animator = GetComponent<Animator>();
     }
-    public void takeDamage(){
-        Debug.Log(pV.dmgm);
-        transform.localScale = pV.dmgm*transform.localScale;
+    public void takeDamage(float dm = pV.dmgm){
+        Debug.Log(dm);
+        transform.localScale = dm*transform.localScale;
         animator.SetTrigger("Bounce");
     }
     public void dashDamage(){
