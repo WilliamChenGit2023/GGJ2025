@@ -47,6 +47,6 @@ public class SquidMove : MonoBehaviour
     {
         handler();
         cd();
-        //Debug.Log(rb.velocity);
+
     }
 }
