@@ -21,7 +21,7 @@ public class PlayerVariables : MonoBehaviour
     public float dmgm;
     public bool isDashing = false;
     public float maxQuickDashRadius = 100f;
-    public float dashCost = 0.9f;
+    public float dashCost;
     public bool isHealing = false;
     public float healrate = 1.0000000000000001f;
     void Start()
@@ -37,6 +37,7 @@ public class PlayerVariables : MonoBehaviour
         killSize = 0.55f;
         dmgm = 0.8f;
 
+        dashCost = 0.97f;
         pM = GetComponent<PlayerMovement>();
         //rb = GetComponent<RigidBody2D>();
     }

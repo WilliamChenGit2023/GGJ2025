@@ -7,15 +7,19 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private PlayerVariables pV;
     private float shrinkDelay = 0.25f;  // Time to wait between each shrink step (in seconds)
-private float timeSinceLastShrink = 0f; //
+    private float timeSinceLastShrink = 0f; //
+    [SerializeField] private Animator animator;
+
     void Start()
     {
         //pV = GetComponent<PlayerVariables>();
         pV.base_size = transform.localScale;
+        animator = GetComponent<Animator>();
     }
     public void takeDamage(){
         Debug.Log(pV.dmgm);
         transform.localScale = pV.dmgm*transform.localScale;
+        animator.SetTrigger("Bounce");
     }
     public void dashDamage(){
         Debug.Log(pV.dashCost);
@@ -27,6 +31,7 @@ private float timeSinceLastShrink = 0f; //
 
     // Check if enough time has passed to shrink
     if (timeSinceLastShrink >= shrinkDelay) {
+        
         // Shrink the object
         transform.localScale = pV.shrinkRate * transform.localScale;
 
