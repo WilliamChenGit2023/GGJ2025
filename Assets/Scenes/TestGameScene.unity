@@ -12015,7 +12015,6 @@ GameObject:
   - component: {fileID: 1704315117}
   - component: {fileID: 1704315119}
   - component: {fileID: 1704315121}
-  - component: {fileID: 1704315123}
   - component: {fileID: 1704315122}
   m_Layer: 0
   m_Name: Squid
@@ -12176,23 +12175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAggro: 0
---- !u!114 &1704315123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704315116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe9a13db3892445b91280dc1d47fa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 465095688}
-  detectionRadius: 20
-  moveSpeed: 3
-  stoppingDistance: 3
-  eV: {fileID: 1704315122}
 --- !u!1 &1779209028
 GameObject:
   m_ObjectHideFlags: 0

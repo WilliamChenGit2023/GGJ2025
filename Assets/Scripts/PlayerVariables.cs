@@ -35,7 +35,7 @@ public class PlayerVariables : MonoBehaviour
         shrinkRate = 0.99f;
         transform.localScale  = base_scale*transform.localScale;
         killSize = 0.55f;
-        dmgm = 0.8f;
+        dmgm = 0.9f;
 
         dashCost = 0.97f;
         pM = GetComponent<PlayerMovement>();

@@ -44,5 +44,14 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Hit an enemy!");
         }
 
+        if (collision.gameObject.CompareTag("af")) 
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
+            pV.pM.knockBack(direction);
+            pV.pH.takeDamage(1.2f);
+            Debug.Log("Hit an enemy!");
+        }
+
     }
     }
