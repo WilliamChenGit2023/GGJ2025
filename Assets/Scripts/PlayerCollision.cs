@@ -22,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
     {
 
 
-        Debug.Log("Collided with: " + collision.gameObject.tag); 
+        //Debug.Log("Collided with: " + collision.gameObject.tag); 
 
 
 

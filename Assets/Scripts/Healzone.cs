@@ -24,10 +24,10 @@ public class Healzone : MonoBehaviour
 
         if (colliders.Length > 0)
         {
-            Debug.Log("Colliding with: ");
+            //Debug.Log("Colliding with: ");
             foreach (Collider2D col in colliders)
             {
-                Debug.Log(col.gameObject.name);  // List colliding objects
+                //Debug.Log(col.gameObject.name);  // List colliding objects
                 if(col.gameObject.name == "Bubble"){
                     pV.isHealing = true;
                 }
@@ -36,7 +36,7 @@ public class Healzone : MonoBehaviour
         else
         {
             pV.isHealing = false;
-            Debug.Log("No collision detected.");
+            //Debug.Log("No collision detected.");
         }
     }
 
