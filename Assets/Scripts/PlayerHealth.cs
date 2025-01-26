@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private PlayerVariables pV;
+    private float shrinkDelay = 0.25f;  // Time to wait between each shrink step (in seconds)
+private float timeSinceLastShrink = 0f; //
     void Start()
     {
         //pV = GetComponent<PlayerVariables>();
@@ -21,7 +23,16 @@ public class PlayerHealth : MonoBehaviour
         
     }
     void passiveShrink(){
-        transform.localScale = pV.shrinkRate*transform.localScale;
+        timeSinceLastShrink += Time.deltaTime;
+
+    // Check if enough time has passed to shrink
+    if (timeSinceLastShrink >= shrinkDelay) {
+        // Shrink the object
+        transform.localScale = pV.shrinkRate * transform.localScale;
+
+        // Reset the timer after shrinking
+        timeSinceLastShrink = 0f;
+    }
     }
     void bubbleheal(){
         if (transform.localScale.magnitude < pV.base_size.magnitude)

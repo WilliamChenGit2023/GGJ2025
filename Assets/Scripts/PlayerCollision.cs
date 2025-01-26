@@ -22,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
     {
 
 
-        Debug.Log("Collided with: " + collision.gameObject.name); 
+        Debug.Log("Collided with: " + collision.gameObject.tag); 
 
 
 
@@ -34,6 +34,14 @@ public class PlayerCollision : MonoBehaviour
             pV.pH.takeDamage();
             Debug.Log("Hit an enemy!");
 
+        }
+
+        if (collision.gameObject.CompareTag("squid")) 
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
+            pV.pM.knockBack(direction, 2.0f);
+            Debug.Log("Hit an enemy!");
         }
 
     }
