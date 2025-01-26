@@ -7,10 +7,11 @@ public class SquidMove : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody2D rb;
     Vector2 spd;
+    float sn = 2f;
     float cdn = 0;
     void Start()
     {
-        spd = new Vector2(2f,0f);
+        spd = new Vector2(sn,0f);
     }
 
      void OnCollisionEnter2D(Collision2D collision){
@@ -18,11 +19,11 @@ public class SquidMove : MonoBehaviour
             transform.localScale = new Vector3(-1 * transform.localScale.x, 1, 1);
             if(transform.localScale.x <0){
                 Debug.Log("I was facing right");
-                spd= new Vector2(-2f,0f);
+                spd= new Vector2(-sn,0f);
             }
             else{
                 Debug.Log("I was facing left");
-                spd = new Vector2(2f,0f);
+                spd = new Vector2(sn,0f);
             }
             cdn = 0.2f;
         }

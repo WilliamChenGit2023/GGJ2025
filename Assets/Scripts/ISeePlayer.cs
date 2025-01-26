@@ -7,7 +7,7 @@ public class ISeePlayer : MonoBehaviour
     public Transform player;               // Assign the player's transform here
     public float detectionRadius = 20f; 
     public float moveSpeed = 3f;    
-    public float stoppingDistance = 2f;  
+    public float stoppingDistance = 0f;  
 
     public EnemyVariables eV;
     void Start()
@@ -25,7 +25,7 @@ public class ISeePlayer : MonoBehaviour
             }
             else if (distanceToPlayer <= stoppingDistance)
             {
-                //Debug.Log("Reached stopping distance from player.");
+                Debug.Log("Reached stopping distance from player.");
                 eV.isAggro = false;
             }
             else{
