@@ -14,7 +14,7 @@ public class Healzone : MonoBehaviour
     void Update()
     {
         CheckForCollisions();
-        boxSize = new Vector2(5f, 13f);
+        boxSize = new Vector2(gameObject.transform.localScale.x, gameObject.transform.localScale.y);
     }
 
     void CheckForCollisions()
