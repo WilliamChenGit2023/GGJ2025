@@ -53,5 +53,31 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("angler");
         }
 
+        if (collision.gameObject.CompareTag("oc"))
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position - transform.position));
+            pV.pM.knockBack(direction, 1.5f);
+            pV.pH.takeDamage(3f);
+            Debug.Log("octopus");
+        }
+
+        if (collision.gameObject.CompareTag("sh"))
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position - transform.position));
+            pV.pM.knockBack(direction, 2f);
+            pV.pH.takeDamage(4f);
+            Debug.Log("shark");
+        }
+
+        if (collision.gameObject.CompareTag("ma"))
+
+        {
+            Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position - transform.position));
+            pV.pM.knockBack(direction, 1.5f);
+            Debug.Log("manta ray");
+        }
+
     }
     }
