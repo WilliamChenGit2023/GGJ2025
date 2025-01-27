@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ISeePlayer : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] afClips;
     public Transform player;               // Assign the player's transform here
     public float detectionRadius = 20f; 
     public float moveSpeed = 3f;    
@@ -21,8 +22,9 @@ public class ISeePlayer : MonoBehaviour
             {
                 //Debug.Log("Player is within detection range, approaching.");
                 eV.isAggro = true;
-                
-            }
+                SoundFXManager.instance.PlayRandomSoundFXClip(afClips, transform, 0.1f);
+
+        }
             else if (distanceToPlayer <= stoppingDistance)
             {
                 //Debug.Log("Reached stopping distance from player.");
