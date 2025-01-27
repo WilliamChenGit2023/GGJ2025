@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveUpAndDown : MonoBehaviour
 {
-    public float moveSpeed = 1.5f;
+    public float moveSpeed = 3f;
     public float moveDistance = 0.2f; 
     private Vector3 initialPosition; 
     private float time = 0f; 
