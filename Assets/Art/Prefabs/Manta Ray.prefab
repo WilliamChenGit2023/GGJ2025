@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5024070177571278944}
   m_Layer: 0
   m_Name: ma
-  m_TagString: af
+  m_TagString: ma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4343413980357796367}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.36201522, y: 0.35518473, z: 0.24481992}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAggro: 0
+  inStun: 0
+  rb: {fileID: 0}
+  isStunCoroutineRunning: 0
 --- !u!114 &6543040803652058608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   detectionRadius: 15
-  moveSpeed: 3
+  moveSpeed: 3.5
   stoppingDistance: 2
   eV: {fileID: 4532848621506924770}
 --- !u!61 &5024070177571278944

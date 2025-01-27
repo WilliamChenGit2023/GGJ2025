@@ -8,6 +8,9 @@ TagManager:
   - character
   - squid
   - af
+  - oc
+  - sh
+  - ma
   layers:
   - Default
   - TransparentFX
