@@ -512,6 +512,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pV: {fileID: 0}
+  sharpAudioClips:
+  - {fileID: 8300000, guid: 61da5666da0d27448b25ee99fd8d6370, type: 3}
+  - {fileID: 8300000, guid: 77ef3fb58869b7f488329db474bc1613, type: 3}
+  - {fileID: 8300000, guid: 80a16af33762c7747bd59addedd112c0, type: 3}
+  squidAudioClips:
+  - {fileID: 8300000, guid: aebee99a8766f264aae714f0ddbcc970, type: 3}
+  - {fileID: 8300000, guid: 562ce25ffeb4f8141ac68d50bfdf1221, type: 3}
+  - {fileID: 8300000, guid: ae76b9a0051d5254cbd220368cbbf5eb, type: 3}
+  - {fileID: 8300000, guid: 6faf6d10c5314d2429b390006e23b9a7, type: 3}
+  afAudioClips:
+  - {fileID: 8300000, guid: aebee99a8766f264aae714f0ddbcc970, type: 3}
+  - {fileID: 8300000, guid: 6faf6d10c5314d2429b390006e23b9a7, type: 3}
+  - {fileID: 8300000, guid: ae76b9a0051d5254cbd220368cbbf5eb, type: 3}
+  - {fileID: 8300000, guid: 562ce25ffeb4f8141ac68d50bfdf1221, type: 3}
 --- !u!50 &5800030650064344034
 Rigidbody2D:
   serializedVersion: 4

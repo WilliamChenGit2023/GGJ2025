@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private PlayerVariables pV;
+    [SerializeField] private AudioClip[] sharpAudioClips;
+    [SerializeField] private AudioClip[] squidAudioClips;
+    [SerializeField] private AudioClip[] afAudioClips;
     void Start()
     {
         pV = GetComponent<PlayerVariables>();
@@ -32,6 +35,7 @@ public class PlayerCollision : MonoBehaviour
             Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
             pV.pM.knockBack(direction);
             pV.pH.takeDamage();
+            SoundFXManager.instance.PlayRandomSoundFXClip(sharpAudioClips, transform, 1f);
             Debug.Log("Hit an enemy!");
 
         }
@@ -41,6 +45,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
             pV.pM.knockBack(direction, 1.25f);
+            SoundFXManager.instance.PlayRandomSoundFXClip(squidAudioClips, transform, 1f);
             Debug.Log("Hit an enemy!");
         }
 
@@ -50,6 +55,7 @@ public class PlayerCollision : MonoBehaviour
             Vector2 direction = -(ActualNormalize(collision.gameObject.transform.position-transform.position));
             pV.pM.knockBack(direction,1.25f);
             pV.pH.takeDamage(2f);
+            SoundFXManager.instance.PlayRandomSoundFXClip(afAudioClips, transform, 1f);
             Debug.Log("angler");
         }
 
