@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -56,8 +57,9 @@ public class PlayerHealth : MonoBehaviour
     void bubbleTooSmall(){
         //Debug.Log(transform.localScale.magnitude);
         if(transform.localScale.magnitude <= (pV.killSize * pV.base_size).magnitude){
-            Destroy(gameObject);
             SoundFXManager.instance.PlaySoundFXClip(popClip, transform, 1f);
+            string current = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(current);
         }
     }
     // Update is called once per frame
