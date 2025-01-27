@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SquidMove : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] squidClips;
     // Start is called before the first frame update
     public Rigidbody2D rb;
     Vector2 spd;

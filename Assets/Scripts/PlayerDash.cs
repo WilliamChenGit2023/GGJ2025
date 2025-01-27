@@ -8,6 +8,7 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private PlayerVariables pV;
     [SerializeField] private Rigidbody2D rb;
     public float frictionMultiplier = 0.999f;
+    [SerializeField] private AudioClip[] dashClips;
     
     void Start()
     {
@@ -37,6 +38,7 @@ private void HandleDashInput()
         float currentDashSpeed = 2*Math.Min(pV.maxQuickDashRadius, Vector2.Distance(mousePos, transform.position));
         pV.pH.dashDamage();
         rb.velocity = dashDirection * currentDashSpeed;
+        SoundFXManager.instance.PlayRandomSoundFXClip(dashClips, transform, 1f);
 
 
         StartCoroutine(HandleDashDeceleration());

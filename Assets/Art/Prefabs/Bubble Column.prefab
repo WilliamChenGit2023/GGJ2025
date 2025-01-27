@@ -45,11 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038ad55318d0940a39c6b401b4d55278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 2.47, y: 6}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 64
   pV: {fileID: 0}
+  bcClips:
+  - {fileID: 8300000, guid: d51d2583c27e8e24bade4ab0f803dd5a, type: 3}
+  - {fileID: 8300000, guid: f7fb2678f6ee45b48aadb73f297c902a, type: 3}
+  - {fileID: 8300000, guid: cd7230102679dd541b3981febc8338f6, type: 3}
 --- !u!61 &832971180024937980
 BoxCollider2D:
   m_ObjectHideFlags: 0

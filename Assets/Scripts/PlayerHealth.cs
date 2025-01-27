@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private float shrinkDelay = 0.5f;  // Time to wait between each shrink step (in seconds)
     private float timeSinceLastShrink = 0f; //
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioClip popClip;
 
     void Start()
     {
@@ -56,6 +57,7 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log(transform.localScale.magnitude);
         if(transform.localScale.magnitude <= (pV.killSize * pV.base_size).magnitude){
             Destroy(gameObject);
+            SoundFXManager.instance.PlaySoundFXClip(popClip, transform, 1f);
         }
     }
     // Update is called once per frame

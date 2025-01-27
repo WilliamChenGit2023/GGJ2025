@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe9a13db3892445b91280dc1d47fa93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  afClips:
+  - {fileID: 8300000, guid: 50985ebba1fa90246b78ac2c150e9c8c, type: 3}
   player: {fileID: 0}
   detectionRadius: 15
   moveSpeed: 3.5

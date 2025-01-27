@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pV: {fileID: 9110334131245022006}
   animator: {fileID: 6004553737038326600}
+  popClip: {fileID: 8300000, guid: 7e88ed23cb44daa4582fc7444498e92f, type: 3}
 --- !u!95 &6004553737038326600
 Animator:
   serializedVersion: 5
@@ -513,19 +514,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pV: {fileID: 0}
   sharpAudioClips:
-  - {fileID: 8300000, guid: 61da5666da0d27448b25ee99fd8d6370, type: 3}
-  - {fileID: 8300000, guid: 77ef3fb58869b7f488329db474bc1613, type: 3}
-  - {fileID: 8300000, guid: 80a16af33762c7747bd59addedd112c0, type: 3}
+  - {fileID: 8300000, guid: 70a4aaf96ff62ab4da31f5093ef408e1, type: 3}
+  - {fileID: 8300000, guid: 50f7e224a450afc43b2f1350b27c9c20, type: 3}
+  - {fileID: 8300000, guid: 16db8a8014d9f2247ada200cbf760f26, type: 3}
   squidAudioClips:
-  - {fileID: 8300000, guid: aebee99a8766f264aae714f0ddbcc970, type: 3}
-  - {fileID: 8300000, guid: 562ce25ffeb4f8141ac68d50bfdf1221, type: 3}
-  - {fileID: 8300000, guid: ae76b9a0051d5254cbd220368cbbf5eb, type: 3}
-  - {fileID: 8300000, guid: 6faf6d10c5314d2429b390006e23b9a7, type: 3}
+  - {fileID: 8300000, guid: 2943bad88a2678444847907461dca6f4, type: 3}
+  - {fileID: 8300000, guid: 0ce9f0ac5514bb54b8cea4888fef8291, type: 3}
+  - {fileID: 8300000, guid: 87d71bd37bcc949479f6cf2708dff010, type: 3}
+  - {fileID: 8300000, guid: 713a580b3b1aff14baba14d084fcd16b, type: 3}
   afAudioClips:
-  - {fileID: 8300000, guid: aebee99a8766f264aae714f0ddbcc970, type: 3}
-  - {fileID: 8300000, guid: 6faf6d10c5314d2429b390006e23b9a7, type: 3}
-  - {fileID: 8300000, guid: ae76b9a0051d5254cbd220368cbbf5eb, type: 3}
-  - {fileID: 8300000, guid: 562ce25ffeb4f8141ac68d50bfdf1221, type: 3}
+  - {fileID: 8300000, guid: 2943bad88a2678444847907461dca6f4, type: 3}
+  - {fileID: 8300000, guid: 0ce9f0ac5514bb54b8cea4888fef8291, type: 3}
+  - {fileID: 8300000, guid: 87d71bd37bcc949479f6cf2708dff010, type: 3}
+  - {fileID: 8300000, guid: 713a580b3b1aff14baba14d084fcd16b, type: 3}
 --- !u!50 &5800030650064344034
 Rigidbody2D:
   serializedVersion: 4
@@ -568,6 +569,12 @@ MonoBehaviour:
   pV: {fileID: 0}
   rb: {fileID: 0}
   frictionMultiplier: 0.7
+  dashClips:
+  - {fileID: 8300000, guid: 0da05a18adb50774190e53273081195f, type: 3}
+  - {fileID: 8300000, guid: a70560d7cf95bb6449826a003570e41f, type: 3}
+  - {fileID: 8300000, guid: 15bb6fa9817d5fb4faff3a9e8dedb4fc, type: 3}
+  - {fileID: 8300000, guid: 2fdb9201758e1904da342c048a7db510, type: 3}
+  - {fileID: 8300000, guid: ffb4b693381c4bb43b06e1e012c79916, type: 3}
 --- !u!1 &8048826059197799519
 GameObject:
   m_ObjectHideFlags: 0
